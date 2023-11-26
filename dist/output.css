@@ -542,38 +542,22 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.font-heading {
-  font-family: Poppins;
-}
-
 .font-body {
   font-family: Poppins;
 }
 
-.text-3xl {
-  font-size: 2.369rem;
-}
-
-.text-sm {
-  font-size: 0.750rem;
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-.text-xl {
-  font-size: 1.333rem;
+.font-heading {
+  font-family: Poppins;
 }
 
 .text-5xl {
   font-size: 4.210rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-base {
+  font-size: 1rem;
 }
 
-.underline {
-  text-decoration-line: underline;
+.font-bold {
+  font-weight: 700;
 }
