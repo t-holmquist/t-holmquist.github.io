@@ -27,7 +27,6 @@ module.exports = {
       bold: '700',
     },     
     extend: {},
-  },
   plugins: [],
 }
-
+}
