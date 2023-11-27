@@ -2,14 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio</title>
+  <title>Tjalfe Holmquist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="font-heading text-5xl font-bold">
-    Software developer
-  </h1>
-  <p class="font-body text-base">This is the start of a new portfolio</p>
+<body class="bg-background">
+  <!-- flex header styrer navcontainers position -->
+  <header class="flex justify-center">
+    <nav class="flex justify-around items-center mt-4 rounded-full shadow-lg ring-1">
+      <!-- "Logo" og navn -->
+      <div class="flex items-center bg-secondary rounded-l-full px-1">
+        <a class="text-center bg-primary text-background rounded-full p-2 font-bold font-heading" href="#">TH</a>
+        <p class="m-2 font-heading text-sm font-bold text-text">Tjalfe <br>Holmquist</br></p>
+      </div>
+      <!-- nav links -->
+      <div class="flex items-center ml-6 px-3">
+        <a class="font-heading" href="#">Meet me</a>
+        <a class="font-heading ml-6" href="#">Projects</a>
+      </div>
+      <!-- dark mode -->
+      <div class="flex px-3">
+        <img src="/src/media/dark_mode_icon.png" alt="">
+      </div>
+    </nav>
+  </header>
+  <!-- Hero sektion -->
+  <main>
+    <!-- Hero text -->
+    <section>
+      <h1 class="text-4xl font-bold">Software developer</h1>
+      <p>About me text</p>
+    </section>
+    <!-- Portrait -->
+    <aside></aside>
+  </main>
 </body>
 </html>

@@ -19,8 +19,8 @@ module.exports = {
       '5xl': '4.210rem',
     },
     fontFamily: {
-      heading: 'Poppins',
-      body: 'Poppins',
+      heading: 'sans-serif',
+      body: 'sans-serif',
     },
     fontWeight: {
       normal: '400',
