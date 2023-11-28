@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/37c0bd28f7.js" crossorigin="anonymous"></script>
 </head>
 <!-- body flex box -->
-<body class="flex justify-center">
+<body class="flex flex-wrap justify-center">
   <!-- content wrapper div -->
   <div class="w-10/12">
     <!-- flex header styrer navcontainers position -->
@@ -16,12 +16,12 @@
     <nav class="flex justify-around items-center mt-4 rounded-2xl shadow-lg border">
       <!-- "Logo" og navn -->
       <div class="flex items-center">
-        <p class="font-heading text-sm p-2 font-bold text-text-50 bg-primary-600 rounded-l-2xl">Tjalfe <br>Villads</br></p>
+        <p class="font-heading text-sm p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl">Tjalfe Holmquist</p>
       </div>
       <!-- nav links -->
       <div class="flex items-center ml-6 px-3">
-        <a class="font-heading font-bold text-sm text-text-950" href="#">Meet me</a>
-        <a class="font-heading font-bold ml-6 text-sm text-text-950" href="#">Projects</a>
+        <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="#">Meet me</a>
+        <a class="font-heading font-bold ml-6 text-sm text-text-950 hover:text-accent-600" href="#">Projects</a>
       </div>
       <!-- dark mode -->
       <div class="flex px-3">
@@ -46,64 +46,64 @@
     <!-- projects ikke flex -->
     <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
       <!-- section title flex -->
-      <div class="flex">
-        <i class="fa-solid fa-code"></i>
-        <h2 class="text-sm font-bold text-text-950 ml-3">Projects</h2>
+      <div class="flex items-center justify-center w-28 bg-secondary-950">
+        <i class="fa-brands fa-codepen p-1" style="color: #ffffff;"></i>
+        <h2 class="text-sm font-bold text-text-50 ml-3 p-1">Projects</h2>
       </div>
       <ol class="mt-6 space-y-4">
         <!-- Each list item flex -->
         <li class="flex gap-4 items-center">
           <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-            <i class="fa-solid fa-language fa-xl"></i>
+            <i class="fa-solid fa-comments fa-xl"></i>
           </div>
           <!-- project text and type -->
           <div class="flex flex-auto flex-wrap gap-x-2">
-            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
-            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <dd class="w-full flex-none text-sm font-medium text-text">Coding interview tutor</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python, OpenAI</dd>
             <div class="ml-auto text-sm text-text">
-              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
             </div>
           </div>
         </li>
         <li class="flex gap-4 items-center">
           <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-            <i class="fa-solid fa-language fa-xl"></i>
+            <i class="fa-brands fa-react fa-xl"></i>
           </div>
           <!-- project text and type -->
           <div class="flex flex-auto flex-wrap gap-x-2">
-            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
-            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <dd class="w-full flex-none text-sm font-medium text-text">Agency website</dd>
+            <dd class="text-sm text-text-950 opacity-30">React, Tailwindcss</dd>
             <div class="ml-auto text-sm text-text">
-              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
             </div>
           </div>
         </li>
         <li class="flex gap-4 items-center">
           <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-            <i class="fa-solid fa-language fa-xl"></i>
+            <i class="fa-solid fa-notes-medical fa-xl"></i>
           </div>
           <!-- project text and type -->
           <div class="flex flex-auto flex-wrap gap-x-2">
-            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
-            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <dd class="w-full flex-none text-sm font-medium text-text">Physio AI tool</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python, OpenAI, JS</dd>
             <div class="ml-auto text-sm text-text">
-              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
             </div>
           </div>
         </li>
         <li class="flex gap-4 items-center">
           <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-            <i class="fa-solid fa-language fa-xl"></i>
+            <i class="fa-solid fa-heart-pulse fa-xl"></i>
           </div>
           <!-- project text and type -->
           <div class="flex flex-auto flex-wrap gap-x-2">
-            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
-            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <dd class="w-full flex-none text-sm font-medium text-text">Fatigue Monitoring App</dd>
+            <dd class="text-sm text-text-950 opacity-30">React Native</dd>
             <div class="ml-auto text-sm text-text">
-              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
             </div>
           </div>
@@ -113,9 +113,9 @@
     <!-- skills ikke flex -->
     <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
       <!-- section title flex -->
-      <div class="flex">
-        <i class="fa-solid fa-tools"></i>
-        <h2 class="text-sm font-bold text-text ml-3">Skills</h2>
+      <div class="flex items-center justify-center w-28 bg-secondary-950">
+        <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
+        <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50">Skills</h2>
       </div>
       <ol class="mt-6 space-y-4">
         <!-- Each list item flex -->
@@ -176,5 +176,24 @@
     </div>
   </section>
   </div>
+  <footer class="mt-32 flex-none">
+    <div class="sm:px-8">
+      <div class="mx-auto w-full max-w-5xl">
+        <div class="border-t w-full pb-16 pt-10">
+          <div class="relative px-4">
+            <div class="mx-auto max-w-2xl">
+              <div class="flex items-center justify-between gap-6">
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-text-950">
+                  <a class="transition hover:text-accent-600" href="/about">Meet me</a>
+                  <a class="transition hover:text-accent-600" href="/projects">projects</a>
+                </div>
+                  <p class="text-sm text-text-950">© <!-- -->2023<!-- --> Tjalfe Holmquist. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
