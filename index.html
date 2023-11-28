@@ -10,18 +10,18 @@
 <!-- body flex box -->
 <body class="flex justify-center">
   <!-- content wrapper div -->
-  <div class="w-10/12 bg-background">
+  <div class="w-10/12">
     <!-- flex header styrer navcontainers position -->
   <header class="flex justify-center">
-    <nav class="flex justify-around items-center mt-4 rounded-full shadow-lg border">
+    <nav class="flex justify-around items-center mt-4 rounded-2xl shadow-lg border">
       <!-- "Logo" og navn -->
-      <div class="flex items-center rounded-l-full">
-        <p class="font-heading text-sm p-2 font-bold text-background text-center bg-primary rounded-l-full">&lt;Tjalfe <br>Villads&gt;</br></p>
+      <div class="flex items-center">
+        <p class="font-heading text-sm p-2 font-bold text-text-50 bg-primary-600 rounded-l-2xl">Tjalfe <br>Villads</br></p>
       </div>
       <!-- nav links -->
       <div class="flex items-center ml-6 px-3">
-        <a class="font-heading font-bold text-sm" href="#">Meet me</a>
-        <a class="font-heading font-bold ml-6 text-sm" href="#">Projects</a>
+        <a class="font-heading font-bold text-sm text-text-950" href="#">Meet me</a>
+        <a class="font-heading font-bold ml-6 text-sm text-text-950" href="#">Projects</a>
       </div>
       <!-- dark mode -->
       <div class="flex px-3">
@@ -33,37 +33,145 @@
   <main class="flex items-center mt-24 gap-40">
     <!-- Hero text -->
     <section class="flex flex-col ml-16 flex-1">
-      <h1 class="text-4xl font-bold">FULL STACK LEARNER</h1>
-      <p class="text-base">Lorem ipsum dolor stt ammet, consectetut adipisccng elit. Aliquam malesuada arcu sagittis nisl porta, vel bibendum est mattis. Duis rhoncus, ligula et tempus placerat, lacus nunc molestie lectus, vitae porttitor ante nulla et massa. lacus nunc molestie lectus, vitae porttitor ante nulla et massa.</p>
+      <h1 class="text-4xl font-bold text-text-950">FULL STACK LEARNER</h1>
+      <p class="text-base text-text-950">Lorem ipsum dolor stt ammet, consectetut adipisccng elit. Aliquam malesuada arcu sagittis nisl porta, vel bibendum est mattis. Duis rhoncus, ligula et tempus placerat, lacus nunc molestie lectus, vitae porttitor ante nulla et massa. lacus nunc molestie lectus, vitae porttitor ante nulla et massa.</p>
     </section>
     <!-- Portrait -->
     <aside class="flex mr-16 flex-1 max-w-md">
-      <img id="portrait" class="rounded-lg" src="/src/media/portrait.webp" alt="">
+      <img id="portrait" class="rounded-2xl" src="/src/media/portrait.webp" alt="">
     </aside>
   </main>
   <!-- Skills & projects section -->
-  <section class="flex justify-around mt-20 mb-20 gap-10">
-    <!-- projects -->
-    <div class="flex justify-between rounded-2xl border p-6 gap-20">
-      <!-- Each list -->
-      <div class="flex gap-2 items-center">
+  <section class="flex mt-20 mb-20 ml-16 mr-16 gap-5 justify-between">
+    <!-- projects ikke flex -->
+    <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
+      <!-- section title flex -->
+      <div class="flex">
         <i class="fa-solid fa-code"></i>
-        <h2 class="text-sm font-bold text-text">Projects<br>My project</br></h2>
+        <h2 class="text-sm font-bold text-text-950 ml-3">Projects</h2>
       </div>
-      <div class="flex gap-2 items-center">
-        <p class="text-sm">Web development</p>
-      </div>
+      <ol class="mt-6 space-y-4">
+        <!-- Each list item flex -->
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-solid fa-language fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <div class="ml-auto text-sm text-text">
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-solid fa-language fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <div class="ml-auto text-sm text-text">
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-solid fa-language fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <div class="ml-auto text-sm text-text">
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-solid fa-language fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Interviewer API</dd>
+            <dd class="text-sm text-text-950 opacity-30">Python</dd>
+            <div class="ml-auto text-sm text-text">
+              <button class="rounded-lg py-1 px-2 text-sm bg-accent-800 font-bold text-text-50 flex-none" type="submit">View</button>
+              <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
+            </div>
+          </div>
+        </li>
+      </ol>
     </div>
-    <!-- skills -->
-    <div class="flex justify-between rounded-2xl border p-6 gap-20">
-      <!-- Each list -->
-      <div class="flex gap-2 items-center">
-        <i class="fa-solid fa-code"></i>
-        <h2 class="text-sm font-bold text-text">Projects<br>My projct</br></h2>
+    <!-- skills ikke flex -->
+    <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
+      <!-- section title flex -->
+      <div class="flex">
+        <i class="fa-solid fa-tools"></i>
+        <h2 class="text-sm font-bold text-text ml-3">Skills</h2>
       </div>
-      <div class="flex gap-2 items-center">
-        <p class="text-sm">Web development</p>
-      </div>
+      <ol class="mt-6 space-y-4">
+        <!-- Each list item flex -->
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-brands fa-square-js fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">JavaScript</dd>
+            <dd class="w-28 h-2 bg-primary-600 rounded-lg"></dd>
+            <div class="ml-auto text-sm text-text">
+              <p class="text-sm opacity-30">React, Next.js, Redux</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-brands fa-python fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Python</dd>
+            <dd class="w-20 h-2 bg-primary-600 rounded-lg"></dd>
+            <div class="ml-auto text-sm text-text">
+              <p class="text-sm opacity-30">Pandas, Tensorflow, Numpy</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-brands fa-java fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Java</dd>
+            <dd class="w-12 h-2 bg-primary-600 rounded-lg"></dd>
+            <div class="ml-auto text-sm text-text">
+              <p class="text-sm opacity-30">JSL, Apache, Maven</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex gap-4 items-center">
+          <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <i class="fa-brands fa-github fa-xl"></i>
+          </div>
+          <!-- project text and type -->
+          <div class="flex flex-auto flex-wrap gap-x-2">
+            <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+            <dd class="w-32 h-2 bg-primary-600 rounded-lg"></dd>
+            <div class="ml-auto text-sm text-text">
+              <p class="text-sm opacity-30">Branch, pull request</p>
+            </div>
+          </div>
+        </li>
+      </ol>
     </div>
     </div>
   </section>
