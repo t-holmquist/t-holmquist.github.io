@@ -134,14 +134,14 @@
 
   @keyframes portrait-animation{
     0% {
-        box-shadow: 8px -8px 0px #3239ae;
-        transform: translateY(-5px);
+        box-shadow: 10px -10px 0px #9166ff, 20px -20px 0px #3a01cb;
+        transform: translateY(-8px);
     }
     100% {
-        box-shadow: -8px 8px 0px #3239ae;
+        box-shadow: -10px 10px 0px #9166ff, 20px 20px 0px #3a01cb;
     }
 }
 
 #portrait {
-  animation: portrait-animation 3s ease-in-out 0s infinite alternate none;
+  animation: portrait-animation 4s ease-in-out 0s infinite alternate none;
 }
