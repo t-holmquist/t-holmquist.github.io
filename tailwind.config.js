@@ -68,6 +68,10 @@ module.exports = {
         900: 'var(--accent-900)',
         950: 'var(--accent-950)',
       },
+      'neutral': {
+        1: 'var(--neutral-1)',
+        2: 'var(--neutral-2)',
+      },
      },     
      fontSize: {
       sm: '0.750rem',
