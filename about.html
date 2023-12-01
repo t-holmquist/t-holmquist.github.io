@@ -12,10 +12,10 @@
   <!-- content wrapper div -->
   <div class="flex-col w-10/12 bg-neutral-2">
     <header class="flex justify-center">
-      <nav class="flex justify-around items-center mt-4 rounded-2xl border">
+      <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 ">
         <!-- "Logo" og navn -->
         <div class="flex items-center">
-          <a class="font-heading text-sm p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl" href="/index.html" >Tjalfe Holmquist</a>
+          <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl" href="/index.html" >Tjalfe Holmquist</a>
         </div>
         <!-- nav links -->
         <div class="flex items-center ml-6 px-3">
@@ -29,11 +29,11 @@
       </nav>
     </header>
     <!-- Hero sektion -->
-    <main class="sm:flex items-start mt-48 gap-40">
+    <main class="hidden sm:flex items-start mt-48 gap-40">
       <!-- Hero text -->
       <section class="flex flex-col ml-16 flex-1">
         <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950">I get obsessed with things</h1>
-        <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knts and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
+        <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
         <br class="text-base text-text-950">I believe that a combination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</br>
         <br class="text-base text-text-950">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</br>
         <p class="text-sm text-text-950 opacity-30 mt-5">Connect with me here:</p>
@@ -49,8 +49,30 @@
         <img id="portrait" class="rounded-2xl" src="/src/media/portrait_Ville.jpg" width="500" height="500" alt="portrait">
       </aside>
     </main>
+    <!-- Mobile hero sektion -->
+    <main class="sm:hidden flex-col mt-16 gap-10">
+      <!-- Hero text -->
+      <aside class="flex justify-center mt-20 flex-1">
+        <img id="portrait" class="rounded-2xl" src="/src/media/portrait_Ville.jpg" width="200" height="200" alt="portrait">
+      </aside>
+      <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950">I get obsessed with things</h1>
+        <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
+        <br class="text-base text-text-950">I believe that a comnination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</br>
+        <br class="text-base text-text-950">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</br>
+        <p class="text-sm text-text-950 opacity-30 mt-5">Connect with me here:</p>
+         <!-- Social icons -->
+         <div class="flex items-center justify-start w-full gap-5 mt-2 ">
+          <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+         </div>
+      </section>
+      <!-- Portrait -->
+      
+    </main>
     <!-- Skills & projects section -->
-    <section class="flex mt-20 mb-20 ml-16 mr-16 gap-5 justify-between">
+    <section class="sm:flex mt-20 mb-20 mr-8 ml-8 sm:ml-16 sm:mr-16 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
       <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
         <!-- section title flex -->
@@ -61,12 +83,12 @@
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
           <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
               <i class="fa-solid fa-wand-magic-sparkles fa-xl"></i>
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Front-End Engineer Career Path</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text">Front-End Engineer</dd>
               <dd class="text-sm text-text-950 opacity-30">Codecademy</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
@@ -79,7 +101,7 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Machine Learning Specialization</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text">ML Specialization</dd>
               <dd class="text-sm text-text-950 opacity-30">Deeplearning.AI</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
@@ -92,7 +114,7 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Computer Science Career Path</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text">Computer Science</dd>
               <dd class="text-sm text-text-950 opacity-30">Codecademy</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
@@ -105,8 +127,8 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Natural Language Processing Specialization</dd>
-              <dd class="text-sm text-text-950 opacity-30">Deeplearning.AI & Codecademy</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text">NLP Specialization</dd>
+              <dd class="text-sm text-text-950 opacity-30">Deeplearning.AI</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               </div>
@@ -115,7 +137,7 @@
         </ol>
       </div>
       <!-- skills ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
+      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0">
         <!-- section title flex -->
         <div class="flex items-center justify-center w-40 bg-secondary-950">
           <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i>
@@ -131,7 +153,9 @@
             <div class="flex flex-auto flex-wrap gap-x-2">
               <dd class="w-full flex-none text-sm font-medium text-text">M.Sc. in Software Design</dd>
               <p class="text-sm opacity-30">IT-University of CPH</p>
-              <div class="ml-auto text-sm text-text">
+              <!-- Mobile responsive year text -->
+              <p class="sm:hidden text-sm opacity-30">2024-2026</p>
+              <div class="hidden sm:block ml-auto text-sm text-text">
                 <p class="text-sm opacity-30">2024-2026</p>
               </div>
             </div>
@@ -144,7 +168,8 @@
             <div class="flex flex-auto flex-wrap gap-x-2">
               <dd class="w-full flex-none text-sm font-medium text-text">Creative Agency [Nominated]</dd>
               <p class="text-sm opacity-30">Founder & CEO</p>
-              <div class="ml-auto text-sm text-text">
+              <p class="sm:hidden text-sm opacity-30">2021-2023</p>
+              <div class="hidden sm:block ml-auto text-sm text-text">
                 <p class="text-sm opacity-30">2021-2023</p>
               </div>
             </div>
@@ -157,7 +182,8 @@
             <div class="flex flex-auto flex-wrap gap-x-2">
               <dd class="w-full flex-none text-sm font-medium text-text">Physiotherapist</dd>
               <p class="text-sm opacity-30">Clinic</p>
-              <div class="ml-auto text-sm text-text">
+              <p class="sm:hidden text-sm opacity-30">2017-2021</p>
+              <div class="hidden sm:block ml-auto text-sm text-text">
                 <p class="text-sm opacity-30">2017-2021</p>
               </div>
             </div>
@@ -170,7 +196,8 @@
             <div class="flex flex-auto flex-wrap gap-x-2">
               <dd class="w-full flex-none text-sm font-medium text-text">SoMe-manager & Videographer</dd>
               <p class="text-sm opacity-30">Freelance</p>
-              <div class="ml-auto text-sm text-text">
+              <p class="sm:hidden text-sm opacity-30">2019-2021</p>
+              <div class="hidden sm:block ml-auto text-sm text-text">
                 <p class="text-sm opacity-30">2019-2021</p>
               </div>
             </div>
@@ -184,13 +211,24 @@
       </div>
     </section>
     <section class="w-full ring-1 ring-neutral-1 opacity-60"></section>
-    <footer class="flex items-center justify-around">
+    <footer class="hidden sm:flex items-center justify-around ">
       <ol class="flex gap-5 my-10">
         <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
         <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
         <a href="/projects.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Projects</a>
       </ol>
       <ol class="my-10">
+        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+      </ol>
+    </footer>
+    <!-- Mobile footer -->
+    <footer class="sm:hidden flex-col">
+      <ol class="flex justify-center items-center gap-5 p-5">
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/projects.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Projects</a>
+      </ol>
+      <ol class="flex justify-center mb-5">
         <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
