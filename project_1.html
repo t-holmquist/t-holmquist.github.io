@@ -10,7 +10,7 @@
 <!-- body flex box -->
 <body class="flex justify-center bg-neutral-1">
   <!-- content wrapper div -->
-  <div class="flex-col w-10/12 bg-neutral-2">
+  <div class="flex-col lg:w-7/12 w-10/12 bg-neutral-2">
     <header class="flex justify-center">
       <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 ">
         <!-- "Logo" og navn -->
@@ -19,8 +19,7 @@
         </div>
         <!-- nav links -->
         <div class="flex items-center ml-6 px-3">
-          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="#">About</a>
-          <a class="font-heading font-bold ml-6 text-sm text-text-950 hover:text-accent-600" href="#">Projects</a>
+          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
         </div>
         <!-- dark mode -->
         <div class="flex px-3">
@@ -28,11 +27,13 @@
         </div>
       </nav>
     </header>
+    <!-- Article content wrapper -->
+    <section class="flex-col md:mx-28 lg:mx-40">
     <!-- Projects section -->
-    <button class="rounded-full text-text-50 ring-1 ring-text-950 bg-background-950 mt-16 ml-8">
+      <button class="rounded-full text-text-50 ring-1 ring-text-950 bg-background-950 mt-16 ml-8">
         <a href="index.html"><i class="fa-solid fa-arrow-left p-2"></i></a>
     </button>
-    <article class="flex-col ml-8 mr-8 mt-8">
+      <article class="flex-col ml-8 mr-8 mt-8">
         <p class="text-start text-sm opacity-60">| September 5, 2022</p>
         <h1 class="text-2xl font-bold mt-2">Crafting a design system for a multiplanetary future</h1>
         <p class="mt-5">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
@@ -41,9 +42,11 @@
         <h2 class="font-heading text-xl mt-8">Sermone fata</h2>
         <p class="mt-5">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
         <img class="rounded-md mt-8 mb-8" src="/src/media/placeholder_projects.webp" alt="" width="1310" height="872">
-    </article>
-    <section class="w-full ring-1 ring-neutral-1 opacity-60"></section>
-    <footer class="hidden sm:flex items-center justify-around ">
+      </article>
+    </section>
+    <!-- line before footer-->
+    <section class="w-full mt-16 ring-1 ring-neutral-1 opacity-60"></section>
+    <footer class="hidden sm:flex items-center justify-around">
       <ol class="flex gap-5 my-10">
         <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
         <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>

@@ -8,19 +8,18 @@
   <script src="https://kit.fontawesome.com/37c0bd28f7.js" crossorigin="anonymous"></script>
 </head>
 <!-- body flex box -->
-<body class="flex flex-wrap justify-center bg-neutral-1">
+<body class="flex justify-center bg-neutral-1">
   <!-- content wrapper div -->
   <div class="flex-col w-10/12 bg-neutral-2">
     <header class="flex justify-center">
-      <nav class="flex justify-around items-center mt-4 rounded-2xl border">
+      <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0">
         <!-- "Logo" og navn -->
         <div class="flex items-center">
-          <a href="#" class="font-heading text-sm p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl">Tjalfe Holmquist</a>
+          <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl" href="#" >Tjalfe Holmquist</a>
         </div>
         <!-- nav links -->
         <div class="flex items-center ml-6 px-3">
           <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
-          <a class="font-heading font-bold ml-6 text-sm text-text-950 hover:text-accent-600" href="#">Projects</a>
         </div>
         <!-- dark mode -->
         <div class="flex px-3">
@@ -28,20 +27,20 @@
         </div>
       </nav>
     </header>
-    <!-- Hero sektion -->
-    <main class="flex items-center mt-48 gap-40">
-      <!-- Hero text -->
-      <section class="flex flex-col ml-16 flex-1">
-        <h1 class="text-4xl font-bold text-text-950">FULL STACK LEARNER</h1>
-        <p class="text-base text-text-950">Lorem ipsum dolor stt ammet, consectetut adipisccng elit. Aliquam malesuada arcu sagittis nisl porta, vel bibendum est mattis. Duis rhoncus, ligula et tempus placerat, lacus nunc molestie lectus, vitae porttitor ante nulla et massa. lacus nunc molestie lectus, vitae porttitor ante nulla et massa.</p>
+    <!-- Mobile Hero sektion -->
+    <main class="flex-col mt-16 gap-40">
+      <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
+         <!-- Portrait -->
+        <aside class="flex justify-start">
+          <img class="rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
+        </aside>
+        <!-- Hero text -->
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950 mt-5">Full stack learner</h1>
+        <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
       </section>
-      <!-- Portrait -->
-      <aside class="flex mr-16 flex-1 max-w-md">
-        <img id="portrait" class="rounded-2xl" src="/src/media/portrait.webp" width="500" height="500" alt="portrait">
-      </aside>
     </main>
     <!-- Skills & projects section -->
-    <section class="flex mt-20 mb-20 ml-16 mr-16 gap-5 justify-between">
+    <section class="sm:flex mt-16 mb-20 mr-8 ml-8 sm:ml-16 sm:mr-16 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
       <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
         <!-- section title flex -->
@@ -52,21 +51,21 @@
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
           <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
               <i class="fa-solid fa-comments fa-xl"></i>
             </div>
-            <!-- project text and type -->
-            <div class="flex flex-auto flex-wrap gap-x-2">
+            <!-- project text and type flex-col standard and flex large screen -->
+            <div class="flex-col flex-auto flex-wrap gap-x-2">
               <dd class="w-full flex-none text-sm font-medium text-text">Coding interview tutor</dd>
               <dd class="text-sm text-text-950 opacity-30">Python, OpenAI</dd>
               <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+                <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
               </div>
             </div>
           </li>
           <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
               <i class="fa-brands fa-react fa-xl"></i>
             </div>
             <!-- project text and type -->
@@ -74,13 +73,13 @@
               <dd class="w-full flex-none text-sm font-medium text-text">Agency website</dd>
               <dd class="text-sm text-text-950 opacity-30">React, Tailwindcss</dd>
               <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+                <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
               </div>
             </div>
           </li>
           <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
               <i class="fa-solid fa-notes-medical fa-xl"></i>
             </div>
             <!-- project text and type -->
@@ -88,13 +87,13 @@
               <dd class="w-full flex-none text-sm font-medium text-text">Physio AI tool</dd>
               <dd class="text-sm text-text-950 opacity-30">Python, OpenAI, JS</dd>
               <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+                <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
               </div>
             </div>
           </li>
           <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
               <i class="fa-solid fa-heart-pulse fa-xl"></i>
             </div>
             <!-- project text and type -->
@@ -102,7 +101,7 @@
               <dd class="w-full flex-none text-sm font-medium text-text">Fatigue Monitoring App</dd>
               <dd class="text-sm text-text-950 opacity-30">React Native</dd>
               <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+                <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
               </div>
             </div>
@@ -110,7 +109,7 @@
         </ol>
       </div>
       <!-- skills ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
+      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0">
         <!-- section title flex -->
         <div class="flex items-center justify-center w-28 bg-secondary-950">
           <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
@@ -174,13 +173,24 @@
       </div>
     </section>
     <section class="w-full ring-1 ring-neutral-1 opacity-60"></section>
-    <footer class="flex items-center justify-around">
+    <footer class="hidden sm:flex items-center justify-around ">
       <ol class="flex gap-5 my-10">
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="/about.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
         <a href="/projects.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Projects</a>
       </ol>
       <ol class="my-10">
+        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+      </ol>
+    </footer>
+    <!-- Mobile footer -->
+    <footer class="sm:hidden flex-col">
+      <ol class="flex justify-center items-center gap-5 p-5">
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/projects.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Projects</a>
+      </ol>
+      <ol class="flex justify-center mb-5">
         <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
