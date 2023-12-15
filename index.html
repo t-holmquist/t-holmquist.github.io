@@ -29,25 +29,33 @@
       </nav>
     </header>
     <!-- Hero sektion -->
-    <main class="flex-col lg:mt-40 sm:ml-16 sm:mr-16 mt-16 gap-40">
+    <main class="flex-col lg:mt-32 sm:ml-16 sm:mr-16 mt-16 gap-40 sm:w-8/12">
       <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
          <!-- Portrait - avatar hidden untill large screen, then display:flex -->
         <aside class="flex justify-start">
-          <img class="hidden lg:flex rounded-full" src="/src/media/portrait.webp" width="250" height="250" alt="portrait">
+          <img class="hidden lg:flex rounded-full" src="/src/media/portrait.webp" width="70" height="70" alt="portrait">
           <img class="sm:hidden rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
         </aside>
         <!-- Hero text -->
-        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950 mt-5">Software designer, entrepeneur & climbing geek</h1>
+        <p class="sm:text-base text-sm text-text-950 mt-5">Hi, I am a</p>
+        <h1 class="text-2xl sm:text-4xl font-bold text-text-950">Software designer, entrepeneur & climbing geek</h1>
         <p class="text-base text-text-950 mt-5">Always searching for opportunites to understand, design and improve things around me. 
           Both in my job and in my personal life.</p>
-        <p class="text-sm text-text-950 mt-5">My mind always hums the question:</p>
-        <p class="text-sm text-center p-1 bg-background-950 font-bold text-text-50 mt-5">"Is this truly the optimal solution?"</p>
+        <p class="text-base text-text-950 mt-5">My mind always hums the question: Is this truly the optimal solution?</p>
+        <p class="sm:w-6/12 text-base text-center p-1 bg-background-950 font-bold text-text-50 mt-5">I'm always up for a cup of coffee<i class="fa-solid fa-coffee ml-1"></i></p>
+        <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
+         <!-- Social icons -->
+         <div class="flex items-center justify-start w-full gap-5 mt-2 ">
+          <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+         </div>
       </section>
     </main>
     <!-- Skills & projects section -->
     <section class="sm:flex mt-12 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1">
+      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 sm:block flex flex-col items-center">
         <!-- section title flex -->
         <div class="flex items-center justify-center w-28 bg-secondary-950">
           <i class="fa-brands fa-codepen p-1" style="color: #ffffff;"></i>
@@ -113,8 +121,84 @@
           </li>
         </ol>
       </div>
+      <!-- Something else section ikke flex -->
+      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center">
+        <!-- section title flex -->
+        <div class="flex items-center justify-center w-28 bg-secondary-950">
+          <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
+          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50">Something</h2>
+        </div>
+        <ol class="mt-6 space-y-4">
+          <!-- Each list item flex -->
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-square-js fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">JavaScript</dd>
+              <dd class="w-28 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">React, Next.js, Redux</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-python fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">Python</dd>
+              <dd class="w-20 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">Pandas, Tensorflow, Numpy</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-java fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">Java</dd>
+              <dd class="w-12 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">JSL, Apache, Maven</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-github fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+              <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-github fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+              <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
       <!-- skills ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0">
+      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center">
         <!-- section title flex -->
         <div class="flex items-center justify-center w-28 bg-secondary-950">
           <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
@@ -158,6 +242,19 @@
               <dd class="w-12 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
                 <p class="text-sm opacity-30 sm:mt-0 mt-1">JSL, Apache, Maven</p>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-brands fa-github fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+              <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
+              <div class="ml-auto text-sm text-text">
+                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
               </div>
             </div>
           </li>
