@@ -11,47 +11,50 @@
 <body class="flex justify-center bg-neutral-1">
   <!-- content wrapper div -->
   <div class="flex-col w-10/12 bg-neutral-2">
-    <header class="flex justify-center">
-      <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0">
-        <!-- "Logo" og navn -->
-        <div class="flex items-center">
-          <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-primary-600 rounded-l-2xl" href="#" >Tjalfe Holmquist</a>
-        </div>
-        <!-- nav links -->
-        <div class="flex items-center ml-2 px-3 gap-2">
-          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/index.html">Home</a>
-          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
-        </div>
-        <!-- dark mode -->
-        <div class="flex px-3">
-          <i class="fa-solid fa-moon"></i>
-        </div>
-      </nav>
-    </header>
-    <!-- Hero sektion -->
-    <main class="flex-col lg:mt-32 sm:ml-16 sm:mr-16 mt-16 gap-40 sm:w-8/12">
-      <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
-         <!-- Portrait - avatar hidden untill large screen, then display:flex -->
-        <aside class="flex justify-start">
-          <img class="hidden lg:flex rounded-full" src="/src/media/portrait.webp" width="70" height="70" alt="portrait">
-          <img class="sm:hidden rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
-        </aside>
-        <!-- Hero text -->
-        <p class="sm:text-base text-sm text-text-950 mt-5">Hi, I am a</p>
-        <h1 class="text-2xl sm:text-4xl font-bold text-text-950">Software designer, entrepeneur & climbing geek</h1>
-        <p class="text-base text-text-950 mt-5">Always searching for opportunites to understand, design and improve things around me. 
-          Both in my job and in my personal life.</p>
-        <p class="text-base text-text-950 mt-5">My mind always hums the question: Is this truly the optimal solution?</p>
-        <p class="sm:w-6/12 text-sm text-center p-1 bg-background-950 font-bold text-text-50 mt-5 rounded-2xl"><i class="fa-solid fa-coffee mr-3"></i>I'm always up for a cup of coffee</p>
-        <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
-         <!-- Social icons -->
-         <div class="flex items-center justify-start w-full gap-5 mt-2 ">
-          <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-          <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
-         </div>
-      </section>
-    </main>
+    <!-- Background SVG wrapper -->
+    <div id="hero-svg">
+      <header class="flex justify-center">
+        <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0">
+          <!-- "Logo" og navn -->
+          <div class="flex items-center">
+            <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl" href="#" >Tjalfe Holmquist</a>
+          </div>
+          <!-- nav links -->
+          <div class="flex items-center ml-2 px-3 gap-2">
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/index.html">Home</a>
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
+          </div>
+          <!-- dark mode -->
+          <div class="flex px-3">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+        </nav>
+      </header>
+        <!-- Hero sektion -->
+      <main class="flex-col lg:mt-20 sm:ml-16 sm:mr-16 mt-16 gap-40 sm:w-7/12">
+        <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
+            <!-- Portrait - avatar hidden untill large screen, then display:flex -->
+          <aside class="flex justify-start">
+            <img class="sm:hidden rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
+          </aside>
+          <!-- Hero text -->
+          <p class="sm:text-base text-sm text-text-950 mt-5">Hi, I am a</p>
+          <h1 class="text-2xl sm:text-4xl font-bold text-text-950">Software designer, entrepeneur & climbing geek</h1>
+          <p class="text-base text-text-950 mt-5">Always searching for opportunites to understand, design and improve things around me. 
+            Both in my job and in my personal life.</p>
+          <p class="text-base text-text-950 mt-5">Take a look at some of my personal projects and feel free to reach out and connect with me!</p>
+          <img class="hidden lg:flex rounded-2xl mt-5" src="/src/media/portrait.webp" width="150" height="70" alt="portrait">
+          <p class="sm:w-4/12 text-sm text-center p-1 bg-secondary-300 font-bold text-text-50 mt-5 rounded-2xl"><i class="fa-solid fa-coffee mr-3"></i>I'm always up for a cup of coffee</p>
+          <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
+            <!-- Social icons -->
+            <div class="flex items-center justify-start w-full gap-5 mt-2 ">
+            <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+            </div>
+        </section>
+      </main>
+    </div>
     <!-- Skills & projects section -->
     <section class="sm:flex mt-12 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
@@ -116,82 +119,6 @@
               <div class="ml-auto text-sm text-text sm:mt-0 mt-1">
                 <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <!-- Something else section ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center">
-        <!-- section title flex -->
-        <div class="flex items-center justify-center w-32 bg-secondary-950 rounded-2xl">
-          <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50">Something</h2>
-        </div>
-        <ol class="mt-6 space-y-4">
-          <!-- Each list item flex -->
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-brands fa-square-js fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">JavaScript</dd>
-              <dd class="w-28 h-2 bg-accent-500 rounded-lg"></dd>
-              <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">React, Next.js, Redux</p>
-              </div>
-            </div>
-          </li>
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-brands fa-python fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Python</dd>
-              <dd class="w-20 h-2 bg-accent-500 rounded-lg"></dd>
-              <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Pandas, Tensorflow, Numpy</p>
-              </div>
-            </div>
-          </li>
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-brands fa-java fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Java</dd>
-              <dd class="w-12 h-2 bg-accent-500 rounded-lg"></dd>
-              <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">JSL, Apache, Maven</p>
-              </div>
-            </div>
-          </li>
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
-              <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
-              <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
-              </div>
-            </div>
-          </li>
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
-              <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
-              <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
               </div>
             </div>
           </li>

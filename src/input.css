@@ -148,3 +148,14 @@
 #portrait {
   animation: portrait-animation 4s ease-in-out 0s infinite alternate none;
 }
+
+
+/* Content wrapper background by SVGbaggrounds.com*/
+#hero-svg {
+  background-image: url(/src/media/svg-background.svg);
+}
+
+#about-svg {
+  background-image: url(/src/media/svg-background.svg);
+}
+
