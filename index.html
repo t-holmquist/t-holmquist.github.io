@@ -4,29 +4,40 @@
   <meta charset="UTF-8">
   <title>Tjalfe Holmquist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Watch for potential stylelink error. Remember to use the correct watcher code snippet -->
   <link href="/dist/output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/37c0bd28f7.js" crossorigin="anonymous"></script>
+  <!-- Defining dark mode toggle function -->
+  <script>
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    }
+  </script>
 </head>
 <!-- body flex box -->
-<body class="flex justify-center bg-neutral-1">
+<body class="flex justify-center bg-neutral-1"> 
   <!-- content wrapper div -->
-  <div class="flex-col w-10/12 bg-neutral-2">
-    <!-- Background SVG wrapper -->
-    <div id="hero-svg">
+  <div class="flex-col w-10/12 bg-neutral-2 dark:bg-background-900">
+    <!-- Background SVG wrapper (should change bg-color when in dark mode) OBS ret navn -->
+    <div id="hero-sv">
       <header class="flex justify-center">
-        <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0">
+        <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 dark:border-text-50">
           <!-- "Logo" og navn -->
           <div class="flex items-center">
-            <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl" href="#" >Tjalfe Holmquist</a>
+            <a class="font-heading text-center text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl dark:bg-background-50 dark:text-text-950" href="#" >Tjalfe Holmquist</a>
           </div>
           <!-- nav links -->
           <div class="flex items-center ml-2 px-3 gap-2">
-            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/index.html">Home</a>
-            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50" href="/index.html">Home</a>
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50" href="/about.html">About</a>
           </div>
-          <!-- dark mode -->
+          <!-- toggle dark mode -->
           <div class="flex px-3">
-            <i class="fa-solid fa-moon"></i>
+            <button onclick="toggleDarkMode()"><i class="fa-solid fa-moon"></i></button>
           </div>
         </nav>
       </header>
@@ -35,14 +46,14 @@
         <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
             <!-- Portrait - avatar hidden untill large screen, then display:flex -->
           <aside class="flex justify-start">
-            <img class="sm:hidden rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
+            <img id="avatar" class="sm:hidden rounded-full" src="/src/media/portrait.webp" width="70" height="60" alt="portrait">
           </aside>
           <!-- Hero text -->
-          <p class="sm:text-base text-sm text-text-950 mt-5">Hi, I am a</p>
-          <h1 class="text-2xl sm:text-4xl font-bold text-text-950">Software designer, entrepeneur & climbing geek</h1>
-          <p class="text-base text-text-950 mt-5">Always searching for opportunites to understand, design and improve things around me. 
+          <p class="sm:text-base text-sm text-text-950 mt-5 dark:text-text-50">Hi, I am a</p>
+          <h1 class="text-2xl sm:text-4xl font-bold text-text-950 dark:text-text-50">Software designer, entrepeneur & climbing geek</h1>
+          <p class="text-base text-text-950 mt-5 dark:text-text-50">Always searching for opportunites to understand, design and improve things around me. 
             Both in my job and in my personal life.</p>
-          <p class="text-base text-text-950 mt-5">Take a look at some of my personal projects and feel free to reach out and connect with me!</p>
+          <p class="text-base text-text-950 mt-5 dark:text-text-50">Take a look at some of my personal projects and feel free to reach out and connect with me!</p>
           <img class="hidden lg:flex rounded-2xl mt-5" src="/src/media/portrait.webp" width="150" height="70" alt="portrait">
           <p class="sm:w-4/12 text-sm text-center p-1 bg-secondary-300 font-bold text-text-50 mt-5 rounded-2xl"><i class="fa-solid fa-coffee mr-3"></i>I'm always up for a cup of coffee</p>
           <p class="text-sm text-text-950 mt-5">Connect with me here:</p>

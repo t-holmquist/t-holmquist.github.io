@@ -67,69 +67,6 @@
     --accent-800: #1d0165;
     --accent-900: #0f0033;
     --accent-950: #070019;
-    
-  }
-  .dark {
-    --text-50: #07001a;
-    --text-100: #0e0033;
-    --text-200: #1d0066;
-    --text-300: #2b0099;
-    --text-400: #3a00cc;
-    --text-500: #4800ff;
-    --text-600: #6d33ff;
-    --text-700: #9166ff;
-    --text-800: #b699ff;
-    --text-900: #daccff;
-    --text-950: #ede5ff;
-    
-    --background-50: #07001a;
-    --background-100: #0e0033;
-    --background-200: #1b0066;
-    --background-300: #290099;
-    --background-400: #3600cc;
-    --background-500: #4400ff;
-    --background-600: #6933ff;
-    --background-700: #8f66ff;
-    --background-800: #b499ff;
-    --background-900: #daccff;
-    --background-950: #ece5ff;
-    
-    --primary-50: #070019;
-    --primary-100: #0f0033;
-    --primary-200: #1d0165;
-    --primary-300: #2c0198;
-    --primary-400: #3a01cb;
-    --primary-500: #4901fe;
-    --primary-600: #6d34fe;
-    --primary-700: #9267fe;
-    --primary-800: #b69afe;
-    --primary-900: #dbccff;
-    --primary-950: #ede6ff;
-    
-    --secondary-50: #07001a;
-    --secondary-100: #0e0033;
-    --secondary-200: #1d0066;
-    --secondary-300: #2b0099;
-    --secondary-400: #3a00cc;
-    --secondary-500: #4800ff;
-    --secondary-600: #6d33ff;
-    --secondary-700: #9166ff;
-    --secondary-800: #b699ff;
-    --secondary-900: #daccff;
-    --secondary-950: #ede5ff;
-    
-    --accent-50: #070019;
-    --accent-100: #0f0033;
-    --accent-200: #1d0165;
-    --accent-300: #2c0198;
-    --accent-400: #3a01cb;
-    --accent-500: #4901fe;
-    --accent-600: #6d34fe;
-    --accent-700: #9267fe;
-    --accent-800: #b69afe;
-    --accent-900: #dbccff;
-    --accent-950: #ede6ff;
-    
   }
 }
 
@@ -147,6 +84,22 @@
 
 #portrait {
   animation: portrait-animation 4s ease-in-out 0s infinite alternate none;
+}
+
+/* Front page animation */
+
+@keyframes avatar-animation{
+  0% {
+      transform: translateY(-8px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+
+#avatar {
+  animation: avatar-animation 4s ease-in-out 0s infinite alternate none;
 }
 
 
