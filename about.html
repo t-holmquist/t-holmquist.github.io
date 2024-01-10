@@ -6,27 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/37c0bd28f7.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      const icons = document.querySelectorAll('i');
+      icons.forEach((icon) => {
+      const currentColor = icon.style.color;
+
+      if (currentColor === 'rgb(255, 255, 255)') {
+        icon.style.color = '#00060f'; // Reset color to default
+      } else {
+        icon.style.color = '#ffffff';
+      }
+  });
+  const svgElement = document.querySelector('.svg-class');
+  const svgElementID = svgElement.getAttribute('id');
+  const hasDark = svgElementID.includes('dark');
+  if (hasDark) {
+    // Change the ID to 'hero-svg'
+    svgElement.setAttribute('id', 'hero-svg');
+  } else {
+    // Change the ID to 'hero-svg-dark'
+    svgElement.setAttribute('id', 'hero-svg-dark');
+  }
+}
+  </script>
 </head>
 <!-- body flex box -->
-<body class="flex justify-center bg-neutral-1">
+<body class="flex justify-center bg-neutral-1 dark:bg-background-950"> 
   <!-- content wrapper div -->
-  <div class="flex-col w-10/12 bg-neutral-2">
-    <!-- Background SVG wrapper -->
-    <div id="about-svg">
+  <div class="flex-col w-10/12 bg-neutral-2 dark:bg-background-900">
+    <!-- Background SVG wrapper (should change bg-color when in dark mode) -->
+    <div id="hero-svg" class="svg-class">
       <header class="flex justify-center">
-        <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0">
+        <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 dark:border-text-50">
           <!-- "Logo" og navn -->
           <div class="flex items-center">
-            <a class="font-heading text-center text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl" href="/index.html" >Tjalfe Holmquist</a>
+            <a class="font-heading text-center text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl dark:bg-background-50 dark:text-text-950" href="/index.html" >Tjalfe Holmquist</a>
           </div>
           <!-- nav links -->
           <div class="flex items-center ml-2 px-3 gap-2">
-            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/index.html">Home</a>
-            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200" href="/index.html">Home</a>
+            <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200" href="/about.html">About</a>
           </div>
-          <!-- dark mode -->
+          <!-- toggle dark mode -->
           <div class="flex px-3">
-            <i class="fa-solid fa-moon"></i>
+            <button onclick="toggleDarkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
           </div>
         </nav>
       </header>
@@ -34,11 +63,11 @@
       <main class="hidden lg:flex items-start mt-20 gap-40">
         <!-- Hero text -->
         <section class="flex flex-col ml-24 flex-1">
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950 p-0">I get obsessed with things</h1>
-          <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
-          <br class="text-base text-text-950">I believe that a combination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</br>
-          <br class="text-base text-text-950">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</br>
-          <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950 p-0 dark:text-text-50">I get obsessed with things</h1>
+          <p class="text-base text-text-950 mt-5 dark:text-text-50">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
+          <p class="mt-5 text-base text-text-950 dark:text-text-50">I believe that a combination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</p>
+          <p class="mt-5 text-base text-text-950 dark:text-text-50">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</p>
+          <p class="text-sm text-text-950 mt-5 dark:text-text-50">Connect with me here:</p>
            <!-- Social icons -->
            <div class="flex items-center justify-start w-full gap-5 mt-2 ">
             <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
@@ -54,15 +83,15 @@
       <!-- Mobile og mid-size hero sektion -->
       <main class="lg:hidden flex-col mt-16 gap-10">
         <!-- Hero text -->
-        <aside class="flex justify-center mt-20 flex-1">
+        <aside class="flex justify-center mt-16 flex-1">
           <img id="portrait" class="rounded-2xl" src="/src/media/about_portrait_ville.webp" width="200" height="200" alt="portrait">
         </aside>
         <section class="flex flex-col justify-center ml-8 mr-8 mt-10 flex-1">
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950">I get obsessed with things</h1>
-          <p class="text-base text-text-950 mt-5">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
-          <br class="text-base text-text-950">I believe that a combination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</br>
-          <br class="text-base text-text-950">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</br>
-          <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-text-950 dark:text-text-50">I get obsessed with things</h1>
+          <p class="text-base text-text-950 mt-5 dark:text-text-50">I'm a software engineer with a knack for untangling coding knots and transforming them into user-friendly solutions. My ability to connect with people and foster a positive work environment makes me a team player who's always up for a challenge.</p>
+          <p class="mt-5 text-base text-text-950 dark:text-text-50">I believe that a combination of technical skills, strong communication, and a passion for learning is essential for success in software engineering.</p>
+          <p class="mt-5 text-base text-text-950 dark:text-text-50">My goal is to continuously refine my skills, collaborate with talented individuals, and contribute to innovative projects that make a positive impact on the world.</p>
+          <p class="text-sm text-text-950 mt-5 dark:text-text-50">Connect with me here:</p>
            <!-- Social icons -->
            <div class="flex items-center justify-start w-full gap-5 mt-2 ">
             <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
@@ -76,11 +105,11 @@
     <!-- Skills & projects section -->
     <section class="sm:flex mt-16 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 sm:block flex flex-col items-center">
+      <div class="rounded-2xl border ring-background-950 p-6 flex-1 sm:block flex flex-col items-center dark:border-background-50">
         <!-- section title flex -->
-        <div class="flex items-center justify-center w-32 bg-secondary-950 rounded-2xl">
+        <div class="flex items-center justify-center w-32 bg-secondary-950 rounded-2xl dark:bg-background-50">
           <i class="fa-solid fa-graduation-cap" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text-50 ml-3 p-1">Certificates</h2>
+          <h2 class="text-sm font-bold text-text-50 ml-3 p-1 dark:text-text-950">Certificates</h2>
         </div>
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
@@ -90,8 +119,8 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Front-End Engineer</dd>
-              <dd class="text-sm text-text-950 opacity-30">Codecademy</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Front-End Engineer</dd>
+              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Codecademy</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               </div>
@@ -103,8 +132,8 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">ML Specialization</dd>
-              <dd class="text-sm text-text-950 opacity-30">Deeplearning.AI</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">ML Specialization</dd>
+              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Deeplearning.AI</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               </div>
@@ -116,8 +145,8 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Computer Science</dd>
-              <dd class="text-sm text-text-950 opacity-30">Codecademy</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Computer Science</dd>
+              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Codecademy</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               </div>
@@ -129,8 +158,8 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">NLP Specialization</dd>
-              <dd class="text-sm text-text-950 opacity-30">Deeplearning.AI</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">NLP Specialization</dd>
+              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Deeplearning.AI</dd>
               <div class="ml-auto text-sm text-text">
                 <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
               </div>
@@ -139,11 +168,11 @@
         </ol>
       </div>
       <!-- skills ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center">
+      <div class="rounded-2xl border ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center dark:border-background-50">
         <!-- section title flex -->
-        <div class="flex items-center justify-center w-40 bg-secondary-950 rounded-2xl">
+        <div class="flex items-center justify-center w-40 bg-secondary-950 rounded-2xl dark:bg-background-50">
           <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50">Work Experience</h2>
+          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50 dark:text-text-950">Work Experience</h2>
         </div>
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
@@ -153,12 +182,12 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">M.Sc. in Software Design</dd>
-              <p class="text-sm opacity-30">IT-University of CPH</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">M.Sc. in Software Design</dd>
+              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">IT-University of CPH</p>
               <!-- Mobile responsive year text -->
-              <p class="sm:hidden text-sm opacity-30">2024-2026</p>
+              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2024-2026</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30">2024-2026</p>
+                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2024-2026</p>
               </div>
             </div>
           </li>
@@ -168,11 +197,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Creative Agency [Nominated]</dd>
-              <p class="text-sm opacity-30">Founder & CEO</p>
-              <p class="sm:hidden text-sm opacity-30">2021-2023</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Creative Agency [Nominated]</dd>
+              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Founder & CEO</p>
+              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2021-2023</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30">2021-2023</p>
+                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2021-2023</p>
               </div>
             </div>
           </li>
@@ -182,11 +211,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Physiotherapist</dd>
-              <p class="text-sm opacity-30">Clinic</p>
-              <p class="sm:hidden text-sm opacity-30">2017-2021</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Physiotherapist</dd>
+              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Clinic</p>
+              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2017-2021</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30">2017-2021</p>
+                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2017-2021</p>
               </div>
             </div>
           </li>
@@ -196,11 +225,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">SoMe-manager & Videographer</dd>
-              <p class="text-sm opacity-30">Freelance</p>
-              <p class="sm:hidden text-sm opacity-30">2019-2021</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">SoMe-manager & Videographer</dd>
+              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Freelance</p>
+              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2019-2021</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30">2019-2021</p>
+                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2019-2021</p>
               </div>
             </div>
           </li>
@@ -212,24 +241,24 @@
         </ol>
       </div>
     </section>
-    <section class="w-full ring-1 ring-neutral-1 opacity-60"></section>
-    <footer class="hidden sm:flex items-center justify-around ">
+    <section class="w-full ring-1 ring-neutral-1 opacity-60 dark:opacity-20"></section>
+    <footer class="hidden sm:flex items-center justify-around">
       <ol class="flex gap-5 my-10">
-        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">About</a>
       </ol>
       <ol class="my-10">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2024 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
     <!-- Mobile footer -->
     <footer class="sm:hidden flex-col">
       <ol class="flex justify-center items-center gap-5 p-5">
-        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">About</a>
       </ol>
       <ol class="flex justify-center mb-5">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2024 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
   </div>

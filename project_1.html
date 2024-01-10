@@ -6,64 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/37c0bd28f7.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      const icons = document.querySelectorAll('i');
+      icons.forEach((icon) => {
+      const currentColor = icon.style.color;
+
+      if (currentColor === 'rgb(255, 255, 255)') {
+        icon.style.color = '#00060f'; // Reset color to default
+      } else {
+        icon.style.color = '#ffffff';
+      }
+  });
+}
+  </script>
 </head>
 <!-- body flex box -->
-<body class="flex justify-center bg-neutral-1">
+<body class="flex justify-center bg-neutral-1 dark:bg-background-950">
   <!-- content wrapper div -->
-  <div class="flex-col w-10/12 bg-neutral-2">
+  <div class="flex-col w-10/12 bg-neutral-2 dark:bg-background-900">
     <header class="flex justify-center">
-      <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 ">
+      <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 dark:border-text-50">
         <!-- "Logo" og navn -->
         <div class="flex items-center">
-          <a class="font-heading text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl" href="/index.html" >Tjalfe Holmquist</a>
+          <a class="font-heading text-center text-sm p-2 sm:p-3 font-bold text-text-50 bg-background-950 rounded-l-2xl dark:bg-background-50 dark:text-text-950" href="/index.html" >Tjalfe Holmquist</a>
         </div>
         <!-- nav links -->
         <div class="flex items-center ml-2 px-3 gap-2">
-          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/index.html">Home</a>
-          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600" href="/about.html">About</a>
+          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200" href="/index.html">Home</a>
+          <a class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200" href="/about.html">About</a>
         </div>
-        <!-- dark mode -->
+        <!-- toggle dark mode -->
         <div class="flex px-3">
-          <i class="fa-solid fa-moon"></i>
+          <button onclick="toggleDarkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
         </div>
       </nav>
     </header>
     <!-- Article content wrapper -->
     <section class="flex-col md:mx-28 lg:mx-60">
     <!-- Projects section -->
-      <button class="rounded-full text-text-50 ring-1 ring-text-950 bg-background-950 mt-16 ml-8">
-        <a href="index.html"><i class="fa-solid fa-arrow-left p-2"></i></a>
+      <button class="rounded-full text-text-50 ring-1 ring-text-950 bg-background-950 mt-16 ml-8 hover:bg-accent-600 dark:bg-background-50 dark:hover:bg-accent-200">
+        <a href="index.html"><i class="fa-solid fa-arrow-left p-2" style="color: #ffffff;"></i></a>
     </button>
       <article class="flex-col ml-8 mr-8 mt-8">
-        <p class="text-start text-sm opacity-60">| September 5, 2022</p>
-        <h1 class="text-2xl font-bold mt-2">Crafting a design system for a multiplanetary future</h1>
-        <p class="mt-5">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
+        <p class="text-start text-sm opacity-60 dark:text-text-50">| September 5, 2022</p>
+        <h1 class="text-2xl font-bold mt-2 dark:text-text-50">Crafting a design system for a multiplanetary future</h1>
+        <p class="mt-5 dark:text-text-50">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
         <img class="rounded-2xl mt-8" src="/src/media/placeholder_projects.webp" alt="" width="1310" height="872">
-        <p class="mt-5">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
-        <h2 class="font-heading text-xl mt-8">Sermone fata</h2>
-        <p class="mt-5">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
+        <p class="mt-5 dark:text-text-50">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
+        <h2 class="font-heading text-xl mt-8 dark:text-text-50">Sermone fata</h2>
+        <p class="mt-5 dark:text-text-50">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
         <img class="rounded-2xl mt-8 mb-8" src="/src/media/placeholder_projects.webp" alt="" width="1310" height="872">
       </article>
     </section>
     <!-- line before footer-->
-    <section class="w-full mt-16 ring-1 ring-neutral-1 opacity-60"></section>
+    <section class="w-full mt-16 ring-1 ring-neutral-1 opacity-60 dark:opacity-20"></section>
     <footer class="hidden sm:flex items-center justify-around">
       <ol class="flex gap-5 my-10">
-        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">About</a>
       </ol>
       <ol class="my-10">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2024 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
     <!-- Mobile footer -->
     <footer class="sm:hidden flex-col">
       <ol class="flex justify-center items-center gap-5 p-5">
-        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">About</a>
       </ol>
       <ol class="flex justify-center mb-5">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2024 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
   </div>
