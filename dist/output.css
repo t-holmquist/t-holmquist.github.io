@@ -598,14 +598,6 @@ video {
   position: relative;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -752,10 +744,6 @@ video {
   width: 100%;
 }
 
-.w-9\/12 {
-  width: 75%;
-}
-
 .max-w-md {
   max-width: 28rem;
 }
@@ -878,10 +866,6 @@ video {
 
 .bg-secondary-950 {
   background-color: var(--secondary-950);
-}
-
-.bg-primary-300 {
-  background-color: var(--primary-300);
 }
 
 .p-0 {
@@ -1022,20 +1006,18 @@ video {
   background-image: url(/src/media/svg-background.svg);
 }
 
+/* Content wrapper dark mode background by SVGbaggrounds.com*/
+
+#hero-svg-dark {
+  background-image: url(/src/media/dark-svg-background.svg);
+}
+
 #about-svg {
   background-image: url(/src/media/svg-background.svg);
 }
 
 .hover\:text-accent-600:hover {
   color: var(--accent-600);
-}
-
-:is(.dark .dark\:border) {
-  border-width: 1px;
-}
-
-:is(.dark .dark\:border-t) {
-  border-top-width: 1px;
 }
 
 :is(.dark .dark\:border-background-50) {
@@ -1046,48 +1028,44 @@ video {
   border-color: var(--text-50);
 }
 
-:is(.dark .dark\:bg-primary-300) {
-  background-color: var(--primary-300);
-}
-
-:is(.dark .dark\:bg-background-950) {
-  background-color: var(--background-950);
-}
-
-:is(.dark .dark\:bg-text-400) {
-  background-color: var(--text-400);
-}
-
-:is(.dark .dark\:bg-primary-400) {
-  background-color: var(--primary-400);
-}
-
-:is(.dark .dark\:bg-background-700) {
-  background-color: var(--background-700);
-}
-
-:is(.dark .dark\:bg-background-800) {
-  background-color: var(--background-800);
+:is(.dark .dark\:bg-background-50) {
+  background-color: var(--background-50);
 }
 
 :is(.dark .dark\:bg-background-900) {
   background-color: var(--background-900);
 }
 
-:is(.dark .dark\:bg-background-50) {
-  background-color: var(--background-50);
+:is(.dark .dark\:bg-background-800) {
+  background-color: var(--background-800);
+}
+
+:is(.dark .dark\:bg-background-950) {
+  background-color: var(--background-950);
+}
+
+:is(.dark .dark\:bg-background-200) {
+  background-color: var(--background-200);
+}
+
+:is(.dark .dark\:bg-background-500) {
+  background-color: var(--background-500);
+}
+
+:is(.dark .dark\:bg-background-700) {
+  background-color: var(--background-700);
 }
 
 :is(.dark .dark\:text-text-50) {
   color: var(--text-50);
 }
 
-:is(.dark .dark\:text-text-300) {
-  color: var(--text-300);
-}
-
 :is(.dark .dark\:text-text-950) {
   color: var(--text-950);
+}
+
+:is(.dark .dark\:opacity-60) {
+  opacity: 0.6;
 }
 
 @media (min-width: 640px) {

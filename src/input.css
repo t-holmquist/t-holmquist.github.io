@@ -108,6 +108,11 @@
   background-image: url(/src/media/svg-background.svg);
 }
 
+/* Content wrapper dark mode background by SVGbaggrounds.com*/
+#hero-svg-dark {
+  background-image: url(/src/media/dark-svg-background.svg);
+}
+
 #about-svg {
   background-image: url(/src/media/svg-background.svg);
 }

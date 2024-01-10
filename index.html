@@ -15,15 +15,35 @@
       } else {
         document.documentElement.classList.add('dark');
       }
-    }
+      const icons = document.querySelectorAll('i');
+      icons.forEach((icon) => {
+      const currentColor = icon.style.color;
+
+      if (currentColor === 'rgb(255, 255, 255)') {
+        icon.style.color = '#00060f'; // Reset color to default
+      } else {
+        icon.style.color = '#ffffff';
+      }
+  });
+  const svgElement = document.querySelector('.svg-class');
+  const svgElementID = svgElement.getAttribute('id');
+  const hasDark = svgElementID.includes('dark');
+  if (hasDark) {
+    // Change the ID to 'hero-svg'
+    svgElement.setAttribute('id', 'hero-svg');
+  } else {
+    // Change the ID to 'hero-svg-dark'
+    svgElement.setAttribute('id', 'hero-svg-dark');
+  }
+}
   </script>
 </head>
 <!-- body flex box -->
-<body class="flex justify-center bg-neutral-1"> 
+<body class="flex justify-center bg-neutral-1 dark:bg-background-950"> 
   <!-- content wrapper div -->
   <div class="flex-col w-10/12 bg-neutral-2 dark:bg-background-900">
-    <!-- Background SVG wrapper (should change bg-color when in dark mode) OBS ret navn -->
-    <div id="hero-sv">
+    <!-- Background SVG wrapper (should change bg-color when in dark mode) -->
+    <div id="hero-svg" class="svg-class">
       <header class="flex justify-center">
         <nav class="flex justify-around items-center mt-4 rounded-2xl border mx-8 sm:mx-0 dark:border-text-50">
           <!-- "Logo" og navn -->
@@ -37,7 +57,7 @@
           </div>
           <!-- toggle dark mode -->
           <div class="flex px-3">
-            <button onclick="toggleDarkMode()"><i class="fa-solid fa-moon"></i></button>
+            <button onclick="toggleDarkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
           </div>
         </nav>
       </header>
@@ -56,7 +76,7 @@
           <p class="text-base text-text-950 mt-5 dark:text-text-50">Take a look at some of my personal projects and feel free to reach out and connect with me!</p>
           <img class="hidden lg:flex rounded-2xl mt-5" src="/src/media/portrait.webp" width="150" height="70" alt="portrait">
           <p class="sm:w-4/12 text-sm text-center p-1 bg-secondary-300 font-bold text-text-50 mt-5 rounded-2xl"><i class="fa-solid fa-coffee mr-3"></i>I'm always up for a cup of coffee</p>
-          <p class="text-sm text-text-950 mt-5">Connect with me here:</p>
+          <p class="text-sm text-text-950 mt-5 dark:text-text-50">Connect with me here:</p>
             <!-- Social icons -->
             <div class="flex items-center justify-start w-full gap-5 mt-2 ">
             <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
@@ -69,11 +89,11 @@
     <!-- Skills & projects section -->
     <section class="sm:flex mt-12 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 sm:block flex flex-col items-center">
+      <div class="rounded-2xl border ring-background-950 p-6 flex-1 sm:block flex flex-col items-center dark:border-background-50">
         <!-- section title flex -->
-        <div class="flex items-center justify-center w-28 bg-secondary-950 rounded-2xl">
+        <div class="flex items-center justify-center w-28 bg-secondary-950 rounded-2xl dark:bg-background-50">
           <i class="fa-brands fa-codepen p-1" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text-50 ml-3 p-1">Projects</h2>
+          <h2 class="text-sm font-bold text-text-50 ml-3 p-1 dark:text-text-950">Projects</h2>
         </div>
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
@@ -83,8 +103,8 @@
             </div>
             <!-- project text and type flex-col standard and flex large screen -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Coding interview tutor</dd>
-              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1">Python, OpenAI</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Coding interview tutor</dd>
+              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">Python, OpenAI</dd>
               <div class="ml-auto text-sm text-text sm:mt-0 mt-1">
                 <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
@@ -97,8 +117,8 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Agency website</dd>
-              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1">React, Tailwindcss</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Agency website</dd>
+              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">React, Tailwindcss</dd>
               <div class="ml-auto text-sm text-text sm:mt-0 mt-1">
                 <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
@@ -111,8 +131,8 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Physio AI tool</dd>
-              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1">Python, OpenAI, JS</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Physio AI tool</dd>
+              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">Python, OpenAI, JS</dd>
               <div class="ml-auto text-sm text-text sm:mt-0 mt-1">
                 <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
@@ -125,8 +145,8 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Fatigue Monitoring App</dd>
-              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1">React Native</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Fatigue Monitoring App</dd>
+              <dd class="text-sm text-text-950 opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">React Native</dd>
               <div class="ml-auto text-sm text-text sm:mt-0 mt-1">
                 <a href="/project_1.html"><button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button></a>
                 <a href="#"><i class="fa-brands fa-github fa-2xl ml-1"></i></a>
@@ -136,11 +156,11 @@
         </ol>
       </div>
       <!-- skills ikke flex -->
-      <div class="rounded-2xl ring-1 ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center">
+      <div class="rounded-2xl border ring-background-950 p-6 flex-1 mt-10 sm:mt-0 sm:block flex flex-col items-center dark:border-background-50">
         <!-- section title flex -->
-        <div class="flex items-center justify-center w-28 bg-secondary-950 rounded-2xl">
+        <div class="flex items-center justify-center w-28 bg-secondary-950 rounded-2xl dark:bg-background-50">
           <i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50">Skills</h2>
+          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50 dark:text-text-950">Skills</h2>
         </div>
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
@@ -150,10 +170,10 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">JavaScript</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">JavaScript</dd>
               <dd class="w-28 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">React, Next.js, Redux</p>
+                <p class="text-sm opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">React, Next.js, Redux</p>
               </div>
             </div>
           </li>
@@ -163,10 +183,10 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Python</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Python</dd>
               <dd class="w-20 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Pandas, Tensorflow, Numpy</p>
+                <p class="text-sm opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">Pandas, Tensorflow, Numpy</p>
               </div>
             </div>
           </li>
@@ -176,10 +196,10 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Java</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Java</dd>
               <dd class="w-12 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">JSL, Apache, Maven</p>
+                <p class="text-sm opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">JSL, Apache, Maven</p>
               </div>
             </div>
           </li>
@@ -189,10 +209,10 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Git</dd>
               <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
+                <p class="text-sm opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">Branch, pull request</p>
               </div>
             </div>
           </li>
@@ -202,10 +222,10 @@
             </div>
             <!-- project text and type -->
             <div class="sm:flex flex-col flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text">Git</dd>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Git</dd>
               <dd class="w-32 h-2 bg-accent-500 rounded-lg"></dd>
               <div class="ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 sm:mt-0 mt-1">Branch, pull request</p>
+                <p class="text-sm opacity-30 sm:mt-0 mt-1 dark:text-text-50 dark:opacity-60">Branch, pull request</p>
               </div>
             </div>
           </li>
@@ -215,21 +235,21 @@
     <section class="w-full ring-1 ring-neutral-1 opacity-60"></section>
     <footer class="hidden sm:flex items-center justify-around ">
       <ol class="flex gap-5 my-10">
-        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">Home</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">About</a>
       </ol>
       <ol class="my-10">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2023 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
     <!-- Mobile footer -->
     <footer class="sm:hidden flex-col">
       <ol class="flex justify-center items-center gap-5 p-5">
-        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">Home</a>
-        <a href="/about.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600">About</a>
+        <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">Home</a>
+        <a href="/about.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50">About</a>
       </ol>
       <ol class="flex justify-center mb-5">
-        <li class="font-heading text-sm text-text-950">© 2023 Tjalfe Holmquist. All rights reserved.</li>
+        <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2023 Tjalfe Holmquist. All rights reserved.</li>
       </ol>
     </footer>
   </div>
