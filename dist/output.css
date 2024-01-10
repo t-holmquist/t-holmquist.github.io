@@ -1060,14 +1060,6 @@ video {
   opacity: 0.6;
 }
 
-:is(.dark .dark\:hover\:bg-accent-600:hover) {
-  background-color: var(--accent-600);
-}
-
-:is(.dark .dark\:hover\:bg-accent-950:hover) {
-  background-color: var(--accent-950);
-}
-
 :is(.dark .dark\:hover\:bg-accent-200:hover) {
   background-color: var(--accent-200);
 }
@@ -1126,6 +1118,10 @@ video {
     gap: 1.25rem;
   }
 
+  .sm\:bg-neutral-1 {
+    background-color: var(--neutral-1);
+  }
+
   .sm\:p-3 {
     padding: 0.75rem;
   }
@@ -1136,6 +1132,10 @@ video {
 
   .sm\:text-base {
     font-size: 1rem;
+  }
+
+  :is(.dark .sm\:dark\:bg-background-950) {
+    background-color: var(--background-950);
   }
 }
 
