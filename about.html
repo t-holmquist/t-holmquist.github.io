@@ -103,7 +103,7 @@
     </div>
     </main>
     <!-- Skills & projects section -->
-    <section class="sm:flex mt-16 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
+    <section class="sm:flex mt-12 mb-20 mr-8 ml-8 sm:ml-24 sm:mr-24 gap-10 sm:gap-5 justify-between">
       <!-- projects ikke flex -->
       <div class="rounded-2xl border ring-background-950 p-6 flex-1 sm:block flex flex-col items-center dark:border-background-50">
         <!-- section title flex -->
@@ -114,17 +114,26 @@
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
           <li class="flex gap-4 items-center">
-            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-solid fa-wand-magic-sparkles fa-xl"></i>
+            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-solid fa-laptop-code fa-xl"></i>
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Front-End Engineer</dd>
-              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Codecademy</dd>
-              <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
-              </div>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">Computer Science</dd>
+              <dd class="text-sm text-text-950 dark:text-text-50">Codecademy</dd>
             </div>
+            <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+          </li>
+          <li class="flex gap-4 items-center">
+            <div class="flex relative mt-1 h-10 w-10 flex-none items-center justify-center">
+              <i class="fa-solid fa-users fa-xl"></i>
+            </div>
+            <!-- project text and type -->
+            <div class="flex flex-auto flex-wrap gap-x-2">
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">DevOps practices</dd>
+              <dd class="text-sm text-text-950 dark:text-text-50">Codecademy</dd>              
+            </div>
+            <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
           </li>
           <li class="flex gap-4 items-center">
             <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
@@ -132,25 +141,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">ML Specialization</dd>
-              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Deeplearning.AI</dd>
-              <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
-              </div>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">ML Specialization</dd>
+              <dd class="text-sm text-text-950 dark:text-text-50">Deeplearning.AI</dd>              
             </div>
-          </li>
-          <li class="flex gap-4 items-center">
-            <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
-              <i class="fa-solid fa-laptop-code fa-xl"></i>
-            </div>
-            <!-- project text and type -->
-            <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Computer Science</dd>
-              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Codecademy</dd>
-              <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
-              </div>
-            </div>
+            <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
+
           </li>
           <li class="flex gap-4 items-center">
             <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center">
@@ -158,12 +153,10 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">NLP Specialization</dd>
-              <dd class="text-sm text-text-950 opacity-30 dark:text-text-50 dark:opacity-60">Deeplearning.AI</dd>
-              <div class="ml-auto text-sm text-text">
-                <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
-              </div>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">NLP Specialization</dd>
+              <dd class="text-sm text-text-950 dark:text-text-50">Deeplearning.AI</dd>              
             </div>
+            <button class="rounded-lg py-1 px-2 text-sm bg-accent-500 font-bold text-text-50 flex-none" type="submit">View</button>
           </li>
         </ol>
       </div>
@@ -172,7 +165,7 @@
         <!-- section title flex -->
         <div class="flex items-center justify-center w-40 bg-secondary-950 rounded-2xl dark:bg-background-50">
           <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i>
-          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50 dark:text-text-950">Work Experience</h2>
+          <h2 class="text-sm font-bold text-text ml-3 p-1 text-text-50 dark:text-text-950">Work & education</h2>
         </div>
         <ol class="mt-6 space-y-4">
           <!-- Each list item flex -->
@@ -182,12 +175,12 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">M.Sc. in Software Design</dd>
-              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">IT-University of CPH</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">M.Sc. in Software Design</dd>
+              <p class="text-sm dark:text-text-50">IT-University of CPH</p>
               <!-- Mobile responsive year text -->
-              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2024-2026</p>
+              <p class="sm:hidden text-sm dark:text-text-50">2024-2026</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2024-2026</p>
+                <p class="text-sm dark:text-text-50">2024-2026</p>
               </div>
             </div>
           </li>
@@ -197,11 +190,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Creative Agency [Nominated]</dd>
-              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Founder & CEO</p>
-              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2021-2023</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">Creative Agency [Nominated]</dd>
+              <p class="text-sm dark:text-text-50">Founder & CEO</p>
+              <p class="sm:hidden text-sm dark:text-text-50">2021-2023</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2021-2023</p>
+                <p class="text-sm dark:text-text-50">2021-2023</p>
               </div>
             </div>
           </li>
@@ -211,11 +204,11 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">Physiotherapist</dd>
-              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Clinic</p>
-              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2017-2021</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">Physiotherapist</dd>
+              <p class="text-sm dark:text-text-50">Clinic</p>
+              <p class="sm:hidden text-sm dark:text-text-50">2017-2021</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2017-2021</p>
+                <p class="text-sm dark:text-text-50">2017-2021</p>
               </div>
             </div>
           </li>
@@ -225,18 +218,18 @@
             </div>
             <!-- project text and type -->
             <div class="flex flex-auto flex-wrap gap-x-2">
-              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50">SoMe-manager & Videographer</dd>
-              <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">Freelance</p>
-              <p class="sm:hidden text-sm opacity-30 dark:text-text-50 dark:opacity-60">2019-2021</p>
+              <dd class="w-full flex-none text-sm font-medium text-text dark:text-text-50 font-bold">SoMe-manager & Videographer</dd>
+              <p class="text-sm dark:text-text-50">Freelance</p>
+              <p class="sm:hidden text-sm dark:text-text-50">2019-2021</p>
               <div class="hidden sm:block ml-auto text-sm text-text">
-                <p class="text-sm opacity-30 dark:text-text-50 dark:opacity-60">2019-2021</p>
+                <p class="text-sm dark:text-text-50">2019-2021</p>
               </div>
             </div>
           </li>
           <!-- download cv -->
           <button class="flex items-center justify-center rounded-lg w-full bg-accent-500 gap-2">
             <p class="text-text-50 font-bold text-sm p-1">Download CV</p>
-            <i class="fa-solid fa-arrow-down fa-sm" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-arrow-down fa-sm" style="color: #f9f6f6;"></i>
           </button>
         </ol>
       </div>
@@ -246,7 +239,7 @@
       <ol class="flex gap-5 my-10">
         <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">Home</a>
         <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">About</a>
-        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ft-holmquist.github.io%2F" class="rounded-lg px-2 bg-accent-500 font-heading font-bold text-sm text-text-50">PageSpeed score<i class="fa-solid fa-arrow-up-right-from-square p-1" style="color: #ffffff;"></i></a>
+        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ft-holmquist.github.io%2F" class="rounded-lg px-2 bg-background-950 font-heading font-bold text-sm text-text-50 dark:bg-background-50 dark:text-text-950">PageSpeed score<i class="fa-solid fa-arrow-up-right-from-square p-1" style="color: #ffffff;"></i></a>
 
       </ol>
       <ol class="my-10">
@@ -258,7 +251,7 @@
       <ol class="flex justify-center items-center gap-5 p-5">
         <a href="/index.html" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">Home</a>
         <a href="#" class="font-heading font-bold text-sm text-text-950 hover:text-accent-600 dark:text-text-50 dark:hover:text-accent-200">About</a>
-        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ft-holmquist.github.io%2F" class="rounded-lg px-2 bg-accent-500 font-heading font-bold text-sm text-text-50">PageSpeed score<i class="fa-solid fa-arrow-up-right-from-square p-1" style="color: #ffffff;"></i></a>
+        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ft-holmquist.github.io%2F" class="rounded-lg px-2 bg-background-950 font-heading font-bold text-sm text-text-50 dark:bg-background-50 dark:text-text-950">PageSpeed score<i class="fa-solid fa-arrow-up-right-from-square p-1" style="color: #ffffff;"></i></a>
       </ol>
       <ol class="flex justify-center mb-5">
         <li class="font-heading text-sm text-text-950 dark:text-text-50">© 2024 Tjalfe Holmquist. All rights reserved.</li>
