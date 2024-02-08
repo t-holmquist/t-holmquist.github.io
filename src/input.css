@@ -97,6 +97,28 @@
   }
 }
 
+/* Certificate background animation */
+
+#animated-background {
+  background: linear-gradient(90deg, #4901fe, #b69afe);
+  background-size: 400% 400%;
+  animation: shift 6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+
+
+
+
 
 
 #avatar {
