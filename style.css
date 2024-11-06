@@ -9,7 +9,7 @@
     /* Spacing, border, other styling */
     --nav-border-radius: 0px 0px 25px 25px;
     --footer-border-radius: 25px 25px 0px 0px;
-    --image-border-radius: 10%;
+    --image-border-radius: 15px;
     --button-border-radius: 20px;
     --text-large: 1rem;
 }
@@ -41,11 +41,11 @@ button {
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 92px;
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 32px;
 }
 
 h3 {
@@ -77,6 +77,9 @@ body {
 /* Controlling padding on all content */
 main {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
  /* Navbar */
@@ -141,13 +144,36 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 4rem;
+    
 }
-
+/* Relative position of hero-right to create new anchor for absolute positioned floating boxes */
 .hero-right {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    
+    position: relative;
+}
+
+.floatingbox-large {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: var(--image-border-radius);
+    background-color: var(--background-red);
+    top: -1rem;
+    left: -2rem;
+    animation: floating 3s ease-in-out alternate-reverse infinite;
+}
+
+.floatingbox-small {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--image-border-radius);
+    background-color: var(--background-red);
+    bottom: 2.5rem;
+    right: -1rem;
+    animation: floating-down 3s ease-in-out alternate-reverse infinite;
 }
 
 .hero-left {
@@ -156,13 +182,14 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 40rem;
+
 }
 
 
 /* Maerkesager styles */
 .maerkesager-container {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     margin-top: 1rem;
 }
 
@@ -170,6 +197,19 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+/* Info card styles */
+
+.infocard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+    width: 50%;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--image-border-radius);
 }
 
 /* Footer styles */
@@ -195,4 +235,26 @@ main {
     color: white;
     gap: 1rem;
     align-items: center;
+}
+
+/* floating box animation */
+
+@keyframes floating {
+    from {
+        transform: translateY(-1rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes floating-down {
+    from {
+        transform: translateY(1rem);
+        
+    }
+    to {
+        transform: translateY(0rem);
+        
+    }
 }
