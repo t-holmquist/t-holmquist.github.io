@@ -2,7 +2,9 @@
 :root {
     /* Colors */
     --primarygradient: linear-gradient(180deg, rgba(208,1,78,1) 0%, rgba(255,38,118,1) 55%, rgba(241,87,144,1) 100%);
+    --primarygradient-hover: linear-gradient(180deg, rgb(253, 55, 128) 0%, rgb(253, 87, 148) 55%, rgb(251, 109, 161) 100%);
     --background-gray: #F8F2F2;
+    --secondarybutton-hover: #fdd7d7;
     --background-red: #FFD6D7;
     --text-black: #121111;
     --text-white: #FFF;
@@ -124,6 +126,12 @@ main {
     border-radius: var(--nav-border-radius)
 }
 
+@media (min-width: 768px) {
+    .nav-mobile {
+        display: none;
+    }
+}
+
 .nav-item-container {
     display: flex;
     align-items: center;
@@ -166,6 +174,10 @@ main {
     cursor: pointer;
 }
 
+.primary-button:hover {
+    background: var(--primarygradient-hover);
+}
+
 .secondary-button {
     background: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -174,6 +186,10 @@ main {
     width: fit-content;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: var(--secondarybutton-hover);
 }
 
 /* Hero styles */
@@ -262,7 +278,6 @@ main {
 }
 
 /* Info card styles */
-
 .infocard-container {
     display: flex;
     flex-direction: column;
@@ -274,8 +289,14 @@ main {
     border-radius: var(--image-border-radius);
 }
 
-/* Footer styles */
+@media (max-width: 768px) {
+    .infocard-container {
+       width: 90%;
+    }
+}
 
+
+/* Footer styles */
 .footer-container {
     display: flex;
     align-items: center;
@@ -284,6 +305,12 @@ main {
     margin-top: 4rem;
     justify-content: space-between;
     background: var(--primarygradient);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+       display: none;
+    }
 }
 
 .footerlink-middle-container {
@@ -299,8 +326,26 @@ main {
     align-items: center;
 }
 
-/* floating box animation */
+/* mobile footer */
+.footer-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--footer-border-radius);
+    padding: 1rem;
+    margin-top: 4rem;
+    gap: 2rem;
+    justify-content: space-between;
+    background: var(--primarygradient);
+}
 
+@media (min-width: 768px) {
+    .footer-container-mobile {
+        display: none;
+    }
+}
+
+/* floating box animation */
 @keyframes floating {
     from {
         transform: translateY(-1rem);
