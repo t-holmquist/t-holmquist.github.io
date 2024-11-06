@@ -1,0 +1,198 @@
+/* Design system styles */
+:root {
+    /* Colors */
+    --primarygradient: linear-gradient(180deg, rgba(208,1,78,1) 0%, rgba(255,38,118,1) 55%, rgba(241,87,144,1) 100%);
+    --background-gray: #F8F2F2;
+    --background-red: #FFD6D7;
+    --text-black: #121111;
+    --text-white: #FFF;
+    /* Spacing, border, other styling */
+    --nav-border-radius: 0px 0px 25px 25px;
+    --footer-border-radius: 25px 25px 0px 0px;
+    --image-border-radius: 10%;
+    --button-border-radius: 20px;
+    --text-large: 1rem;
+}
+
+/* browser reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* basic styling */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--image-border-radius);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 34px;
+}
+
+/* Text sizing styles */
+
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-large {
+    font-size: 1.2rem;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-max-width {
+    max-width: 24rem;
+}
+
+body {
+    background-color: var(--background-gray);
+}
+
+/* Controlling padding on all content */
+main {
+    padding: 2rem;
+}
+
+ /* Navbar */
+.nav {
+    /* desktop fixed height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--primarygradient);
+    border-radius: var(--nav-border-radius)
+}
+
+.nav-item-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: var(--text-white);
+    font-size: var(--text-large);
+    cursor: pointer;
+}
+
+/* buttons */
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    background-color: var(--background-gray);
+    padding: 0.5em;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+}
+
+.primary-button {
+    background: var(--primarygradient);
+    padding: 0.5em;
+    color: var(--text-white);
+    border-radius: var(--button-border-radius);
+    width: fit-content;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.secondary-button {
+    background: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: var(--text-black);
+    border-radius: var(--button-border-radius);
+    width: fit-content;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Hero styles */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+
+.hero-left {
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 40rem;
+}
+
+
+/* Maerkesager styles */
+.maerkesager-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.maerkesager-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Footer styles */
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    border-radius: var(--footer-border-radius);
+    padding: 1rem;
+    margin-top: 4rem;
+    justify-content: space-between;
+    background: var(--primarygradient);
+}
+
+.footerlink-middle-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footerlink-right-container {
+    display: flex;
+    color: white;
+    gap: 1rem;
+    align-items: center;
+}
