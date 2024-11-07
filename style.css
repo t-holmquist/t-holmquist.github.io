@@ -93,7 +93,7 @@ body {
     background-color: var(--background-gray);
 }
 
-/* Controlling padding on all content */
+/* Main controlling padding on all content */
 main {
     padding: 2rem;
     display: flex;
@@ -218,7 +218,7 @@ main {
     }
 }
 
-/* Relative position of hero-right to create new anchor for absolute positioned floating boxes */
+/* Relative position of hero-right class to create new anchor for absolutely positioned floating boxes */
 .hero-right {
     display: flex;
     flex-direction: column;
