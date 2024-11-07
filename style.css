@@ -150,6 +150,10 @@ main {
     cursor: pointer;
 }
 
+.nav-item:hover {
+    color: var(--secondarybutton-hover);
+}
+
 /* buttons */
 
 .button-container {
@@ -162,6 +166,10 @@ main {
     padding: 0.5em;
     border-radius: var(--button-border-radius);
     cursor: pointer;
+}
+
+.nav-button:hover {
+    background: var(--secondarybutton-hover);
 }
 
 .primary-button {
@@ -247,13 +255,19 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 40rem;
+}
 
+@media (max-width: 768px) {
+    .hero-left {
+       margin-top: 2rem;
+    }
 }
 
 
 /* Maerkesager styles */
 .maerkesager-container {
     display: flex;
+    align-items: center;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -262,6 +276,8 @@ main {
     .maerkesager-container {
        flex-direction: column;
        padding: 1.5rem;
+       gap: 4rem;
+       margin-top: 0;
     }
 }
 
@@ -345,7 +361,7 @@ main {
     }
 }
 
-/* floating box animation */
+/* floating box animations */
 @keyframes floating {
     from {
         transform: translateY(-1rem);
